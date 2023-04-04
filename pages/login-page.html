@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/login-page.css">
+
+    <title> Palette Portal | Login </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+</head>
+
+<body>
+    <div id="background"></div>
+    <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="form-container">
+        <h3
+            style="width: fit-content; margin-left: auto; margin-right: auto; font-size: 2em; margin-top: 0%; margin-bottom: 0.5em; font-weight: 3rem;">
+            Pallete
+            Portal</h3>
+        <form id="contactForm">
+            <h3> Login </h3>
+
+            <label for="username">Username</label>
+            <input type="text" placeholder="Email or Phone" id="name" required>
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" required>
+
+            <button type="submit" class="login-btn"><a href="index.html">Log In</a></button>
+            <div class="buttons-row">
+                <button type="button" class="google-btn">
+                    <i class="google-icon"></i>
+                    <span> Google </span>
+                </button>
+                <a href="index.html">
+                    <button type="button" class="back-btn">
+                        <i class="back-icon"></i>
+                        <span> Go Back </span>
+                    </button>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script src="../scripts/loginstyle.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> 
+
+   <!-- --------------------------------------------------------------------- -->
+</body>
+
+</html>
