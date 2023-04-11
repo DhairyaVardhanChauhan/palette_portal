@@ -50,7 +50,7 @@ if(empty($err))
                             $_SESSION["loggedin"] = true;
 
                             //Redirect user to welcome page
-                            header("location: ../pages/index.html");
+                            header("location: welcome.php");
                             
                         }
                     }
@@ -115,7 +115,7 @@ if(empty($err))
             <label for="password">Password</label>
             <input type="password" placeholder="Password" name="password" id="inputPassword4" required>
 
-            <button type="submit" class="login-btn"><a href="../pages/index.html">Log In</a></button>
+            <button type="submit" class="login-btn">Log In</button>
             <div class="buttons-row">
                 <a href="register.php">New Here? Join Us.</a>
             </div>

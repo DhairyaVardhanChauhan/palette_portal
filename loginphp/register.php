@@ -140,7 +140,7 @@ mysqli_close($conn);
             <label for="password">Confirm Password</label>
             <input type="password" placeholder="Confirm Password" name="confirm_password" id="inputpassword" required>
 
-            <button type="submit" class="login-btn">Register</button>
+            <button type="submit" class="login-btn">    Register</button>
             <div class="buttons-row">
             <a href="login.php">Already a member?</a>
                 </a>
