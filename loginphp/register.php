@@ -105,7 +105,7 @@ mysqli_close($conn);
     <link rel="stylesheet" href="../styles/general.css">
     <link rel="stylesheet" href="../styles/login-page.css">
 
-    <title> Palette Portal | Login </title>
+    <title> Palette Portal | Register </title>
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 </head>
@@ -125,22 +125,22 @@ mysqli_close($conn);
             style="width: fit-content; margin-left: auto; margin-right: auto; font-size: 2em; margin-top: 0%; margin-bottom: 0.5em; font-weight: 3rem;">
             Pallete
             Portal</h3>
-        <form id="contactForm">
+            <form action="" method="post">
             <h3> Sign Up </h3>
 
             <label for="username">Username</label>
-            <input type="text" placeholder="Username" name="username" id="inputname" required>
+            <input type="text" placeholder="Username" name="username" id="inputEmail4" required>
 <!-- 
             <label for="username">Email</label>
             <input type="email" placeholder="Email" id="name" required> -->
 
             <label for="password">Password</label>
-            <input type="password" placeholder="Password" name="password" id="inputPassword" required>
+            <input type="password" placeholder="Password" name="password" id="inputPassword4" required>
 
             <label for="password">Confirm Password</label>
             <input type="password" placeholder="Confirm Password" name="confirm_password" id="inputpassword" required>
 
-            <button type="submit" class="login-btn"><a href="index.html">Register</a></button>
+            <button type="submit" class="login-btn">Register</button>
             <div class="buttons-row">
             <a href="login.php">Already a member?</a>
                 </a>
