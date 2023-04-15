@@ -35,15 +35,20 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 <body>
     <header>
         <h1 class="logo"> Palette Portal </h1>
-        <h1><?php echo "Welcome, ".$_SESSION['username']?></h1>
+        <h1 class="logo"><?php echo "Hello, ".$_SESSION['username']?></h1>
 
         <div class="btn-rw">
             <a href="../pages/explore.html">
                 <button id="login-btn"> explore </button>
             </a>
+            <a href="../loginphp/profile.php">
+                <button id="login-btn"> Profile </button>
+            </a>
             <a href="../loginphp/logout.php">
                 <button id="login-btn"> Logout </button>
             </a>
+
+            
 
         </div>
     </header>

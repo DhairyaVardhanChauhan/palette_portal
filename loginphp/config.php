@@ -1,19 +1,30 @@
 <?php
-/*
-This file contains database configuration assuming you are running mysql using user "root" and password ""
-*/
 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'login');
+class Dbh {
+    private $conn;
 
-// Try connecting to the Database
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    public function __construct($dbServer, $dbUsername, $dbPassword, $dbName) {
+        // Try connecting to the Database
+        $this->conn = mysqli_connect($dbServer, $dbUsername, $dbPassword, $dbName);
 
-//Check the connection
-if($conn == false){
-    dir('Error: Cannot connect');
+        // Check the connection
+        if(!$this->conn) {
+            die('Error: Cannot connect to the database');
+        }
+    }
+
+    public function getConnection() {
+        return $this->conn;
+    }
 }
+
+// Usage:
+// Create an instance of the DatabaseConfig class
+$dbConfig = new Dbh('localhost', 'root', '', 'login');
+
+// Get the database connection object
+$conn = $dbConfig->getConnection();
+
+// Now you can use the $conn object to perform database operations, e.g. executing queries, fetching results, etc.
 
 ?>
