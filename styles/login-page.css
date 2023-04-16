@@ -333,3 +333,15 @@ body {
     width: 150px;
     height: 150px;
   }
+.message{
+  position: sticky;
+  top:0;left:0;right:0;
+  padding:15px 10px;
+  background-color: var(--white);
+  text-align:center;
+  z-index:1000;
+  box-shadow: var(--box-shadow);
+  font-size: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+}

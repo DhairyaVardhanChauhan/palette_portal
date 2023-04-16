@@ -1,96 +1,115 @@
-  body {
-    margin: 0;
-  }
-  
-  main {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr;
-    margin: 90px 20px;
-    column-gap: 20px;
-    row-gap: 20px;
-  }
+body {
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  margin: 90px 20px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
 
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    font-family: 'Baloo Bhai', Arial;
-  }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  font-family: 'Baloo Bhai', Arial;
+}
 
 
-  .navbar-brand {
-    font-size: 24px;
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Post button styles */
+.post-btn {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Baloo Bhai 2';
+}
+
+.change-mode {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Baloo Bhai 2';
+}
+
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    font-size: 1rem;
     font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .button-container {
-    display: flex;
-    gap: 10px;
-  }
-
-  /* Post button styles */
-  .post-btn {
-    background-color: #fff;
-    color: #333;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    font-size: 16px;
+    box-shadow: 0 0 1rem white;
+    transition: 0.15s;
     cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Baloo Bhai 2';
-  }
+}
 
-  .change-mode {
-    background-color: #fff;
-    color: #333;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Baloo Bhai 2';
-  }
+.post-btn:hover {
+  background-color: #CEFF1A;
+  box-shadow: 0 0 1.5rem #CEFF1A;
+  transition: 0.15s;
+}
+.change-mode:hover{
+  color: white;
+  background-color: #F8C630;
+  box-shadow: 0 0 1.5rem #F8C630;
+  transition: 0.15s;
+}
 
-  .btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #0077b6;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.navbar-brand:hover {
+  text-shadow: 0 0 1.5rem white;
+}
 
-  .item {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.695);
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
+.item {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.695);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
 
-  .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .item:hover {
-    transform: translateY(-10px);
-  }
+.item:hover {
+  transform: translateY(-10px);
+}
