@@ -1,3 +1,23 @@
+<?php
+
+include 'config.php';
+session_start();
+$user_id = $_SESSION['user_id'];
+
+if(!isset($user_id)){
+   header('location:login.php');
+};
+
+if(isset($_GET['logout'])){
+   unset($user_id);
+   session_destroy();
+   header('location:login.php');
+};
+
+
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -20,15 +40,28 @@
 </head>
 
 <body>
+<?php
+      $select_user = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die('query failed');
+      if(mysqli_num_rows($select_user) > 0){
+         $fetch_user = mysqli_fetch_assoc($select_user);
+      };
+   ?>
     <header>
         <h1 class="logo"> Palette Portal </h1>
+        <h1> Hello, <span><?php echo $fetch_user['username']; ?></span> </h1>
+
         <div class="btn-rw">
-                        <a href="explore.html">
+            <a href="explore.html">
                 <button id="login-btn"> explore </button>
             </a>
-            <a href="../loginphp/logout.php">
+            <a href="profile.php">
+                <button id="login-btn"> Profile </button>
+            </a>
+            <a href="logout.php">
                 <button id="login-btn"> Logout </button>
             </a>
+
+            
 
         </div>
     </header>
@@ -38,12 +71,12 @@
         <div class="search-input">
             <input class="searchbar" type="text" placeholder="Search..." onfocus="showBar()" onblur="hideBar()">
             <div class="autocom-box">
-                <!-- here list are inserted from javascript -->
             </div>
         </div>
     </div>
 
     <main class="art-preview">
+        
         <div class="art"></div>
         <div class="art"></div>
         <div class="art"></div>
