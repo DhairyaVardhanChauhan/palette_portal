@@ -51,10 +51,10 @@ if(isset($_GET['logout'])){
         <h1> Hello, <span><?php echo $fetch_user['username']; ?></span> </h1>
 
         <div class="btn-rw">
-            <a href="../pages/explore.html">
+            <a href="explore.html">
                 <button id="login-btn"> explore </button>
             </a>
-            <a href="../loginphp/profile.php">
+            <a href="profile.php">
                 <button id="login-btn"> Profile </button>
             </a>
             <a href="logout.php">
