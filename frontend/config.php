@@ -1,5 +1,5 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','art_gallery_db') or die('connection failed');
+$conn = mysqli_connect('localhost','root','','art_gallery') or die('connection failed');
 
 ?>

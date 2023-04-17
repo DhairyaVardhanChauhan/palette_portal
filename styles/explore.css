@@ -15,14 +15,16 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+  gap: 60px;
+  height: 75px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  padding: 0 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 100;
   font-family: 'Baloo Bhai', Arial;
 }
 
@@ -64,16 +66,33 @@ main {
   font-family: 'Baloo Bhai 2';
 }
 
+
 .btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #0077b6;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 0 1rem white;
+    transition: 0.15s;
+    cursor: pointer;
+}
+
+.post-btn:hover {
+  background-color: #CEFF1A;
+  box-shadow: 0 0 1.5rem #CEFF1A;
+  transition: 0.15s;
+}
+.change-mode:hover{
+  color: white;
+  background-color: #F8C630;
+  box-shadow: 0 0 1.5rem #F8C630;
+  transition: 0.15s;
+}
+
+.navbar-brand:hover {
+  text-shadow: 0 0 1.5rem white;
 }
 
 .item {

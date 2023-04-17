@@ -5,10 +5,10 @@ session_start();
 
 if(isset($_POST['submit'])){
 
-   $name = mysqli_real_escape_string($conn, $_POST['name']);
+   $username = mysqli_real_escape_string($conn, $_POST['username']);
    $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
 
-   $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE username = '$name' AND password = '$pass'") or die('query failed');
+   $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE name = '$username' AND password = '$pass'") or die('query failed');
 
    if(mysqli_num_rows($select) > 0){
       $row = mysqli_fetch_assoc($select);
@@ -60,14 +60,22 @@ if(isset($_POST['submit'])){
             style="width: fit-content; margin-left: auto; margin-right: auto; font-size: 2em; margin-top: 0%; margin-bottom: 0.5em; font-weight: 3rem;">
             Pallete
             Portal</h3>
-        <form action="" method="post">
+            <?php
+      if(isset($message)){
+         foreach($message as $message){
+            echo '<div class="message">'.$message.'</div>';
+         }
+      }
+      ?>
+
+        <form action="" method="post" enctype="multipart/form-data">
             <h3> Login </h3>
 
             <label for="username">Username</label>
-            <input type="text" placeholder="Username" name="name" required>
+            <input type="text" name="username" placeholder="Username"  required>
 
             <label for="password">Password</label>
-            <input type="password" placeholder="Password" name="password" required>
+            <input type="password" name="password" placeholder="Password"  required>
 
             <input type="submit" name="submit" class="login-btn" value="Log in">
             <div class="buttons-row">
