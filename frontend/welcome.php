@@ -46,7 +46,7 @@ if(!isset($user_id)){
         <h1> Hello, <span><?php echo $fetch_user['name']; ?></span> </h1>
         
         <div class="btn-rw">
-            <a href="explore.html">
+            <a href="../pages/explore.html">
                 <button id="login-btn"> explore </button>
             </a>
             <a href="profile.php">

@@ -21,6 +21,9 @@ const posts = JSON.parse(localStorage.getItem('posts')) || [];
 
 posts.forEach(function (post) {
   // create an image element with the stored data
+  const imgContainer = document.createElement("a");
+  imgContainer.href = `/palette_portal/pages/shop.html?uuid=${post.uuid}`;
+
   const storedImage = document.createElement('img');
   storedImage.src = post.img;
   const postId = post.uuid;
@@ -30,7 +33,8 @@ posts.forEach(function (post) {
   const main = document.getElementsByTagName('main')[0];
   const item = document.createElement('div');
   item.classList.add('item');
-  item.appendChild(storedImage);
+  imgContainer.append(storedImage);
+  item.appendChild(imgContainer);
   main.appendChild(item);
 });
 

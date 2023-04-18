@@ -1,0 +1,38 @@
+.arr-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 170px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.arr-img{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border-radius: 40px;
+    width: 80%;
+}
+
+.arr-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 90px;
+    width: 500px;
+    height: 60px;
+    text-align: center; /* add this property */
+}
+
+
+.content-container{
+    background-color: black;
+    border-radius: 20px;
+    height: 300px;
+}

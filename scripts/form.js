@@ -4,8 +4,8 @@ const leftPart = document.querySelector('.left-part');
 const input = document.getElementById("pfile");
 
 let image = document.createElement('img');
-image.width = 500; // Set default width to 300 pixels
-image.height = 500; // Set default height to 300 pixels
+image.width = 500; // Set default width to 500 pixels
+image.height = 500; // Set default height to 500 pixels
 image.style.borderRadius = '10px';
 
 let selectedImage;
@@ -18,10 +18,6 @@ chooseButton.addEventListener('click', function (event) {
     if (leftPart.firstChild) {
         leftPart.removeChild(leftPart.firstChild);
     }
-
-    // Create an input element of type file
-    // const input = document.createElement('input');
-    // input.type = 'file';
 
     // Add an event listener to the input element
     input.addEventListener('change', function (event) {
@@ -67,6 +63,32 @@ form.addEventListener("submit", (e) => {
         img: selectedImage,
         uuid: crypto.randomUUID()
     };
+
+    // Convert the "post" object to JSON
+    const postData = JSON.stringify(post);
+
+    // Make an HTTP POST request to the XAMPP server
+    fetch('http://localhost/palette_portal/pages/explore.html', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: postData
+    })
+    .then(response => {
+        if (response.ok) {
+            // Request was successful, handle the response here
+            console.log('Data sent successfully');
+        } else {
+            // Request failed, handle the error here
+            console.error('Failed to send data');
+        }
+    })
+    .catch(error => {
+        // Handle any network errors here
+        console.error('Failed to send data:', error);
+    });
+
 
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
     posts.push(post);
