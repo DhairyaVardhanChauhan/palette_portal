@@ -1,6 +1,6 @@
 <?php
 
-include 'config.php';
+include 'frontend/config.php';
 
 if(isset($_POST['submit'])){
 
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
          if($insert){
             move_uploaded_file($image_tmp_name, $image_folder);
             $message[] = 'registered successfully!';
-            header('location:login.php');
+            header('location:frontend/login.php');
          }else{
             $message[] = 'registeration failed!';
          }
@@ -53,8 +53,8 @@ if(isset($_POST['submit'])){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles/general.css">
-    <link rel="stylesheet" href="../styles/login-page.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/login-page.css">
 
     <title> Palette Portal | Register </title>
 
@@ -106,13 +106,13 @@ if(isset($message)){
             
             <input type="submit" name="submit" class="login-btn" value="Register">
             <div class="buttons-row">
-            <p><a href="login.php">Already a member?</a></p>
+            <p><a href="frontend/login.php">Already a member?</a></p>
             </div>
         </form>
     </div>
 
-    <script src="../scripts/loginstyle.js"></script>
-    <script src="../scripts/login.js"></script>
+    <script src="scripts/loginstyle.js"></script>
+    <script src="scripts/login.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> 
 
 </body>

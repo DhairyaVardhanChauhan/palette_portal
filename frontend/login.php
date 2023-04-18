@@ -79,7 +79,7 @@ if(isset($_POST['submit'])){
 
             <input type="submit" name="submit" class="login-btn" value="Log in">
             <div class="buttons-row">
-                <p><a href="register.php">New Here? Join Us.</a></p>
+                <p><a href="../index.php">New Here? Join Us.</a></p>
             </div>
         </form>
     </div>
