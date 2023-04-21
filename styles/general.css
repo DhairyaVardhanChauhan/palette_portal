@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+p {
+    margin: 0;
+    font-family: 'Baloo Bhai';
+    font-size: 22px;
+}
