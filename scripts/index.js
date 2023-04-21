@@ -4,22 +4,22 @@ window.ityped.init(document.querySelector('.display-text'), {
     backSpeed: 200,
     backDelay: 3000,
     loop: true
-})
+})  
 // Search Bar
 let suggestions = [
-    'Leonardo Da Vinci', 'Vincent van Gogh', 'Pablo Picasso', 'Claude Monet', 'Michelangelo', 'Salvador Dali', 'Frida Kahlo', 'Andy Warhol', 'Jackson Pollock', 'Georgia O\'Keeffe',
+    'Leonardo Da Vinci','Vincent van Gogh', 'Pablo Picasso', 'Claude Monet', 'Michelangelo', 'Salvador Dali', 'Frida Kahlo', 'Jackson Pollock', 'Georgia O\'Keeffe',
     'Gustav Klimt', 'Edvard Munch', 'Henri Matisse', 'Raphael', 'Rembrandt', 'Paul Cezanne', 'Edgar Degas', 'Paul Gauguin', 'Marc Chagall', 'Diego Rivera',
     'Henri Rousseau', 'Joan Miro', 'Amedeo Modigliani', 'Mark Rothko', 'Wassily Kandinsky', 'Norman Rockwell', 'Roy Lichtenstein', 'Jean-Michel Basquiat', 'Keith Haring', 'Cindy Sherman',
     'Yayoi Kusama', 'Willem de Kooning', 'Anselm Kiefer', 'Kazimir Malevich', 'Jasper Johns', 'David Hockney', 'Francis Bacon', 'Hieronymus Bosch', 'Bridget Riley', 'Jean Dubuffet',
     'Johannes Vermeer', 'Titian', 'Diego Velazquez', 'Francisco Goya', 'Caravaggio', 'El Greco', 'Pieter Bruegel the Elder', 'Albrecht Durer', 'Jan van Eyck', 'Peter Paul Rubens',
     'Jan Vermeer van Delft', 'Georges Seurat', 'M.C. Escher', 'Robert Rauschenberg', 'Frank Stella', 'Richard Serra', 'René Magritte', 'Grant Wood', 'Thomas Hart Benton', 'Andrew Wyeth',
     'Jamie Wyeth', 'Karel Appel', 'Lucian Freud', 'H.R. Giger', 'Christo and Jeanne-Claude', 'Jeff Koons', 'Damien Hirst', 'Marcel Duchamp', 'Man Ray', 'Georg Baselitz',
-    'Chuck Close', 'Jean Tinguely', 'Sol LeWitt', 'Agnes Martin', 'Frank Gehry', 'Arshile Gorky', 'Joseph Cornell', 'Romare Bearden', 'David Smith', 'Alex Katz',
+    'Chuck Close', 'Jean Tinguely', 'Sol LeWitt', 'Frank Gehry', 'Arshile Gorky', 'Joseph Cornell', 'Romare Bearden', 'David Smith', 'Alex Katz',
     'Ellsworth Kelly', 'Robert Motherwell', 'Willem de Kooning', 'Isamu Noguchi', 'Helen Frankenthaler', 'Cy Twombly', 'Barnett Newman', 'Clyfford Still', 'Morris Louis', 'Richard Diebenkorn',
     'Joan Mitchell', 'Sam Francis', 'Wayne Thiebaud', 'Philip Guston', 'Mark Tobey', 'Robert Irwin', 'Samuel Morse', 'John Singleton Copley', 'Gilbert Stuart', 'Thomas Cole',
     'Frederic Edwin Church', 'Albert Bierstadt', 'Winslow Homer', 'John Singer Sargent', 'Mary Cassatt', 'Childe Hassam', 'James Abbott McNeill Whistler', 'Edward Hopper', 'Grant Wood', 'Edward Hicks',
-    'Romare Bearden', 'Jacob Lawrence', 'Norman Rockwell', 'Andy Warhol', 'Roy Lichtenstein', 'Jasper Johns', 'Robert Rauschenberg', 'Frank Stella', 'Donald Judd', 'Agnes Martin',
-    'Ellsworth Kelly', 'Cy Twombly', 'Barnett Newman', 'Willem de Kooning'
+    'Romare Bearden', 'Jacob Lawrence', 'Norman Rockwell', 'Andy Warhol','Donald Judd', 'Agnes Martin',
+    , 'Barnett Newman',
 ];
 // getting all required elements
 const searchWrapper = document.querySelector(".search-input");
@@ -76,6 +76,19 @@ inputBox.addEventListener("keydown", (e) => {
             inputBox.value = suggBox.querySelector("li a").textContent;
         }
     }
+    else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        const activeSuggestion = suggBox.querySelector(".active");
+        if (activeSuggestion) {
+            activeSuggestion.previousElementSibling.classList.add("active");
+            activeSuggestion.classList.remove("active");
+            inputBox.value = activeSuggestion.previousElementSibling.querySelector("a").textContent;
+        } else {
+            suggBox.querySelector("li:last-child").classList.add("active");
+            inputBox.value = suggBox.querySelector("li:last-child a").textContent;
+        }
+    }
+    
 });
 
 function showSuggestions(list) {

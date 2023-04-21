@@ -46,6 +46,7 @@ if(isset($_GET['logout'])){
       ?>
       <h3><?php echo $fetch['name']; ?></h3>
       <a href="update_profile.php" class="btn">update profile</a>
+      <a href="welcome.php" class="btn">Home</a>
       <a href="logout.php" class="delete-btn">logout</a>
    </div>
 
