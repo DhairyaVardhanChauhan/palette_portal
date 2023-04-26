@@ -52,47 +52,47 @@ const pcost = document.getElementById("pcost");
 const pdesc = document.getElementById("pdesc");
 
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
 
-    const post = {
-        name: pname.value,
-        type: ptype.value,
-        cost: pcost.value,
-        desc: pdesc.value,
-        img: selectedImage,
-        uuid: crypto.randomUUID()
-    };
+//     const post = {
+//         name: pname.value,
+//         type: ptype.value,
+//         cost: pcost.value,
+//         desc: pdesc.value,
+//         img: selectedImage,
+//         uuid: crypto.randomUUID()
+//     };
 
-    // Convert the "post" object to JSON
-    const postData = JSON.stringify(post);
+//     // Convert the "post" object to JSON
+//     const postData = JSON.stringify(post);
 
-    // Make an HTTP POST request to the XAMPP server
-    fetch('http://localhost/palette_portal/pages/explore.html', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: postData
-    })
-    .then(response => {
-        if (response.ok) {
-            // Request was successful, handle the response here
-            console.log('Data sent successfully');
-        } else {
-            // Request failed, handle the error here
-            console.error('Failed to send data');
-        }
-    })
-    .catch(error => {
-        // Handle any network errors here
-        console.error('Failed to send data:', error);
-    });
+//     // Make an HTTP POST request to the XAMPP server
+//     fetch('http://localhost/palette_portal/pages/explore.html', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: postData
+//     })
+//     .then(response => {
+//         if (response.ok) {
+//             // Request was successful, handle the response here
+//             console.log('Data sent successfully');
+//         } else {
+//             // Request failed, handle the error here
+//             console.error('Failed to send data');
+//         }
+//     })
+//     .catch(error => {
+//         // Handle any network errors here
+//         console.error('Failed to send data:', error);
+//     });
 
 
-    const posts = JSON.parse(localStorage.getItem('posts')) || [];
-    posts.push(post);
+//     const posts = JSON.parse(localStorage.getItem('posts')) || [];
+//     posts.push(post);
 
-    localStorage.setItem('posts', JSON.stringify(posts));
-    window.location = "/palette_portal/pages/explore.html"
-});
+//     localStorage.setItem('posts', JSON.stringify(posts));
+//     window.location = "/palette_portal/pages/explore.html"
+// });

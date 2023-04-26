@@ -19,7 +19,7 @@
   <div class="main-block">
     <div class="right-part"></div> <!-- Add a div for the right part -->
     <div class="left-part"></div>
-    <form id="post-form"> <!-- Add action attribute and method attribute to the form -->
+    <form id="post-form" action="/palette_portal/frontend/upload.php" method="post" enctype="multipart/form-data"> <!-- Add action attribute and method attribute to the form -->
       <div class="title">
         <i class="fas fa-pencil-alt"></i>
         <h2>Post</h2>
@@ -29,7 +29,7 @@
         <input id="ptype" type="text" name="name" required placeholder="type of painting">
         <input id="pcost" type="number" name="name" required placeholder="cost">
         <input id="pdesc" type="text" name="name" required placeholder="description">
-        <input type="file" name="file" id="pfile" style="display: none;">
+        <input type="file" name="fileToUpload" id="pfile" style="display: none;">
       </div>
 
       <button class="post-btn" id="post-choose">Choose Image</button>
