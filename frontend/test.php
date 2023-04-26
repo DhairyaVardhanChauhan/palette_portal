@@ -15,6 +15,30 @@
       .item img:hover {
         transform: translateY(-10px);
       }
+        #container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
+
+      .artwork {
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        padding: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .artwork img {
+        margin-bottom: 10px;
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;}
     </style>
   </head>
   <body>
@@ -28,6 +52,7 @@
         </div>
     </nav>
     <main>
+        
       <div class="item">
         
        <a href="../pages/shop.html"><img src="https://picsum.photos/1200/1201" alt="Image 1"></a>
@@ -65,7 +90,30 @@
       <div class="item">
         <a href="../pages/shop.html"><img  src="https://picsum.photos/1200/1212" alt="Image 12"></a>
       </div>
+      <div id="item">
+    <?php
+      require_once "config.php";
+
+      // display artwork
+      $sql = "SELECT * FROM artwork";
+      $result = mysqli_query($conn, $sql);
+
+      if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+          echo "<div class='item' onclick=\"location.href='preview.php?id=".$row['id']."'\">";
+          echo "<img src='" . $row['image_path'] . "' alt='" . $row['name'] . "'>";
+          echo "</div>";
+        }
+      } else {
+        echo "<p>No artwork found.</p>";
+      }
+
+      mysqli_close($conn);
+    ?>
+
+    </div>
     </main>
+    
   </body>
   <script src="../scripts/explore.js"></script>
 </html>

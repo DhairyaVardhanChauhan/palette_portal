@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Artwork</title>
+</head>
+<body>
+	<h1>Add Artwork</h1>
+	<form action="add_artwork.php" method="post" enctype="multipart/form-data">
+		<label for="name">Name:</label>
+		<input type="text" name="name" id="name"><br><br>
+		
+		<label for="type">Type:</label>
+		<input type="text" name="type" id="type"><br><br>
+		
+		<label for="description">Description:</label><br>
+		<textarea name="description" id="description"></textarea><br><br>
+		
+		<label for="cost">Cost:</label>
+		<input type="number" name="cost" id="cost" step="0.01" min="0"><br><br>
+		
+		<label for="image">Image:</label>
+		<input type="file" name="image" id="image"><br><br>
+		
+		<input type="submit" name="submit" value="Add Artwork">
+	</form>
+</body>
+</html>

@@ -69,6 +69,8 @@ body {
     margin-top: 1.5rem;
     font-weight: 600;
   }
+
+
   
   form input {
     width: 100%;
@@ -107,7 +109,6 @@ body {
 
   a{
     text-decoration: none;
-    color: white;
   }
 
   .login-btn {
