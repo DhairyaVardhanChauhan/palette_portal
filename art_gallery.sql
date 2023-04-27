@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 17, 2023 at 09:30 PM
+-- Generation Time: Apr 27, 2023 at 03:32 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,6 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `artwork`
+--
+
+CREATE TABLE `artwork` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `image_path` varchar(255) DEFAULT NULL,
+  `cost` decimal(10,2) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `artwork`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_form`
 --
 
@@ -39,13 +60,16 @@ CREATE TABLE `user_form` (
 -- Dumping data for table `user_form`
 --
 
-INSERT INTO `user_form` (`id`, `name`, `email`, `password`, `image`) VALUES
-(1, 'Dhruv', 'dhruv@gmail.com', '0eff44c362b13fa25fc88a412f5512e1', 'untitled1.png'),
-(2, 'Artist1', 'umredkar123@gmail.com', '25f9e794323b453885f5181f1b624d0b', '3.png');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `artwork`
+--
+ALTER TABLE `artwork`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user_form`
@@ -58,10 +82,16 @@ ALTER TABLE `user_form`
 --
 
 --
+-- AUTO_INCREMENT for table `artwork`
+--
+ALTER TABLE `artwork`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `user_form`
 --
 ALTER TABLE `user_form`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

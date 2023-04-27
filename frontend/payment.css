@@ -1,0 +1,114 @@
+form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 400px;
+    margin: 50px auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1abc9c;
+    font-size: 36px;
+  }
+
+  label {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+  #btn {
+background-color: #1abc9c;
+color: #fff;
+border: none;
+border-radius: 5px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+}
+
+#btn::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 0%;
+background-color: rgba(255, 255, 255, 0.5);
+opacity: 0.5;
+transition: all 0.3s ease-in-out;
+z-index: -1;
+}
+
+#btn:hover::before {
+height: 100%;
+}
+
+#btn::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+width: 0;
+height: 0;
+background-color: #fff;
+border-radius: 50%;
+opacity: 0;
+transition: all 0.3s ease-in-out;
+transform: translate(-50%, -50%);
+z-index: -1;
+}
+
+#btn:hover::after {
+width: 200px;
+height: 200px;
+opacity: 0.5;
+}
+
+  button[type="submit"] {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #16a085;
+  }
+
+  /* Cool animation on submit button */
+
+  @keyframes button-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+  }
+
+  button[type="submit"]:active {
+    animation: button-pulse 0.3s ease-in-out;
+  }

@@ -77,7 +77,7 @@
         echo "<p><strong>Type: </strong>" . $row['type'] . "</p>";
         echo "<p><strong>Description: </strong>" . $row['description'] . "</p>";
         echo "<p><strong>Cost: </strong>$" . $row['cost'] . "</p>";
-        echo "<a href='checkout.php?id=" . $row['id'] . "'><button>Buy Now</button></a>";
+        echo "<a href='index.php?id=" . $row['id'] . "'><button>Buy Now</button></a>";
         echo "</div>";
       } else {
         echo "<p>No artwork found.</p>";
