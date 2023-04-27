@@ -18,6 +18,8 @@ We have created a website where people can upload and sell their artwork.
 
 - [@DhairyaVardhanChauhan](https://github.com/DhairyaVardhanChauhan)
 
+- [@dipanshu213](https://github.com/dipanshu213)
+
 - [@Dru-O7](https://github.com/Dru-O7)
 ## License
 
