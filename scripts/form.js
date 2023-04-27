@@ -1,7 +1,7 @@
 const chooseButton = document.querySelector('#post-choose');
 const leftPart = document.querySelector('.left-part');
 
-const input = document.getElementById("pfile");
+const input = document.getElementById("image");
 
 let image = document.createElement('img');
 image.width = 500; // Set default width to 500 pixels
@@ -11,6 +11,7 @@ image.style.borderRadius = '10px';
 let selectedImage;
 
 // Add a click event listener to the post button
+
 chooseButton.addEventListener('click', function (event) {
     event.preventDefault(); // Prevent form submission
 

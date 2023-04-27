@@ -16,57 +16,7 @@
         transform: translateY(-10px);
       }
     </style>
-    <!-- <style>
-      /* Global styles */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f7f7f7;
-      }
 
-      #header {
-  background-color: rgba(28, 35, 49, 0.8);
-  backdrop-filter: blur(10px);
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-
-      #header h1 {
-        margin: 0;
-      }
-
-      #container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-      }
-
-      .artwork {
-        background-color: #fff;
-        box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-        padding: 20px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-      }
-
-      .artwork img {
-        margin-bottom: 10px;
-        width: 100%;
-        max-height: 300px;
-        object-fit: cover;
-      }
-    </style> -->
   </head>
   <body>
 
@@ -81,48 +31,7 @@
     </nav>
 
     <main>
-      <!-- <div class="item">
-        
-       <a href="../pages/shop.html"><img src="https://picsum.photos/1200/1201" alt="Image 1"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img src="https://picsum.photos/1200/1202" alt="Image 2"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img src="https://picsum.photos/1200/1203" alt="Image 3"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img src="https://picsum.photos/1200/1204" alt="Image 4"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img src="https://picsum.photos/1200/1205" alt="Image 5"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img src="https://picsum.photos/1200/1206" alt="Image 6"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img src="https://picsum.photos/1200/1207" alt="Image 7"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img  src="https://picsum.photos/1200/1208" alt="Image 8"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img  src="https://picsum.photos/1200/1209" alt="Image 9"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img  src="https://picsum.photos/1200/1210" alt="Image 10"></a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img  src="https://picsum.photos/1200/1211" alt="Image 11">  </a>
-      </div>
-      <div class="item">
-        <a href="../pages/shop.html"><img  src="https://picsum.photos/1200/1212" alt="Image 12"></a>
-      </div>
       
-      <div class="item">
-        <a href="../pages/shop.html"><img  src="https://picsum.photos/1200/1212" alt="Image 12"></a>
-      </div>
-       -->
     <?php
       require_once "config.php";
 
