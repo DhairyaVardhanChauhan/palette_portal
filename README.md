@@ -1,3 +1,4 @@
+![logo-white](https://user-images.githubusercontent.com/96690913/235119706-9b8d1ac0-82dd-4dda-af23-f76d2e8fd5ea.png)
 
 # Palette Portal
 
