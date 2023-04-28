@@ -15,8 +15,8 @@ We have created a website where people can upload and sell their artwork.
 
 
 ## How to use it
-1. Download or clone the repository in htdocs folder of your XAMPP folder.
-2. Now, to setup MySql server head over to localhost/phpmyadmin on browser.
+1. Download or clone the repository and save it in htdocs folder of your XAMPP folder.
+2. Now, to setup MySql database on XAMPP server head over to localhost/phpmyadmin on browser.
 3. Create a new Database 'art_gallery'.
 4. Then click on import button on the top.
 5. Select the 'art_gallery.sql' file.
