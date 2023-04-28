@@ -1,4 +1,5 @@
-![palette-portal-high-resolution-logo-white-on-black-background](https://user-images.githubusercontent.com/96690913/235120447-d39a9f73-04e8-45c1-b6d1-70be97677ee2.png)
+![palette-portal-high-resolution-logo-white-on-black-background](https://user-images.githubusercontent.com/96690913/235125670-244c8713-e85b-4b2e-b4de-73aad4800ca9.png)
+
 
 # Palette Portal
 
