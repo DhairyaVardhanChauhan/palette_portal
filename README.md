@@ -14,11 +14,21 @@ We have created a website where people can upload and sell their artwork.
 [Palette Portal ](http://paletteportal.rf.gd/frontend/register.php)is available and functioning
 
 
+## How to use it
+1. Download or clone the repository in htdocs folder of your XAMPP folder.
+2. Now, to setup MySql server head over to localhost/phpmyadmin on browser.
+3. Create a new Database 'art_gallery'.
+4. Then click on import button on the top.
+5. Select the 'art_gallery.sql' file.
+6. Give pfp and artwork folders located in frontend folder read and write permission for all the users.
+
+## Demo
+
+https://youtu.be/6A3QiSrM_iM?t=258
+
 ## Authors
 
 - [@DhairyaVardhanChauhan](https://github.com/DhairyaVardhanChauhan)
-
-- [@dipanshu213](https://github.com/dipanshu213)
 
 - [@Dru-O7](https://github.com/Dru-O7)
 ## License
